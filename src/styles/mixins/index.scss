@@ -1,0 +1,63 @@
+// Translate to REM for supporting browsers
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name+".woff2");
+    src: url($file-name+".woff") format("woff"),
+      url($file-name+".ttf") format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin breakpoint($point) {
+  @media (min-width: $point) {
+    @content;
+  }
+}
+
+@mixin abs-center($position) {
+  position: absolute;
+
+  @if $position == "vertical" {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else if $position == "horizontal" {
+    left: 50%;
+    transform: translate(-50%);
+  } @else if $position == "both" {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin abs-center-sizes($position, $width, $height) {
+  position: absolute;
+
+  @if $position == "vertical" {
+    top: 50%;
+    margin-top: calc(-#{$height} / 2);
+  } @else if $position == "horizontal" {
+    left: 50%;
+    margin-left: calc(-#{$width} / 2);
+  } @else if $position == "both" {
+    top: 50%;
+    left: 50%;
+
+    margin: {
+      left: calc(-#{$width} / 2);
+      top: calc(-#{$height} / 2);
+    }
+  }
+}
