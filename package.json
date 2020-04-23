@@ -8,6 +8,7 @@
         "@types/node": "^12.12.6",
         "@types/react": "^16.9.34",
         "@types/react-dom": "^16.9.6",
+        "antd": "^4.1.4",
         "axios": "^0.19.0",
         "classnames": "^2.2.6",
         "dotenv": "^8.2.0",
@@ -19,7 +20,7 @@
         "react-dom": "^16.11.0",
         "react-redux": "^7.2.0",
         "react-router-dom": "^5.1.2",
-        "react-scripts": "3.2.0",
+        "react-scripts": "^3.4.1",
         "redux": "^4.0.4",
         "redux-actions": "^2.6.5",
         "redux-devtools-extension": "^2.13.8",
@@ -59,7 +60,7 @@
             "prettier --write",
             "eslint --fix"
         ],
-        "*.{js,json,md}": [
+        "*.{js, jsx}": [
             "prettier --write"
         ]
     },
