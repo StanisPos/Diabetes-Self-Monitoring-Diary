@@ -6,9 +6,9 @@ import { persistStore, persistReducer } from 'redux-persist';
 import { noop } from 'lodash';
 
 const persistConfig = {
-    key: 'root',
-    storage
-    // whitelist: ['authReducer'],
+	key: 'root',
+	storage,
+	// whitelist: ['authReducer'],
 };
 
 const persistedReducer = persistReducer(persistConfig, noop);
@@ -25,8 +25,8 @@ const initialState = {};
 // create store
 const store = createStore(persistedReducer, initialState, enhancer);
 const persistor = persistStore(store);
-sagaMiddleware.run(function* () {
-    return yield;
+sagaMiddleware.run(function*() {
+	return yield;
 });
 
 // export store singleton instance
