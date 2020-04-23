@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistor } from './store/store';
 
 type TemplateType = {
     title: string;
