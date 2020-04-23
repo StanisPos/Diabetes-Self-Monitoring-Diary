@@ -11,9 +11,9 @@
         "axios": "^0.19.0",
         "classnames": "^2.2.6",
         "dotenv": "^8.2.0",
+        "immer": "^6.0.1",
         "lodash": "^4.17.15",
         "moment": "^2.24.0",
-        "immer": "^6.0.1",
         "pdfkit": "^0.10.0",
         "react": "^16.11.0",
         "react-dom": "^16.11.0",
@@ -21,20 +21,22 @@
         "react-router-dom": "^5.1.2",
         "react-scripts": "3.2.0",
         "redux": "^4.0.4",
-        "redux-devtools-extension": "^2.13.8",
         "redux-actions": "^2.6.5",
+        "redux-devtools-extension": "^2.13.8",
         "redux-form": "^8.3.5",
         "redux-persist": "^6.0.0",
         "redux-saga": "^1.1.3",
         "reselect": "^4.0.0",
-        "typescript": "^3.7.2",
         "styled-components": "^5.0.0",
-        "typesafe-actions": "^5.1.0"
+        "typesafe-actions": "^5.1.0",
+        "typescript": "^3.7.2"
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "lint": "npm run eslint && npm run stylelint",
+        "lint": "eslint ./src/**/*.*",
+        "lint:fix": "eslint --fix --ext ./src/**/*.*",
+        "format": "prettier --write \"./src/**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|md|vue)\"",
         "eslint": "eslint \"src/**/*.@(js|jsx|ts|tsx)\" --cache --cache-location \"./.cache/\"\n",
         "stylelint": "stylelint \"src/**/*.scss\" --syntax scss",
         "stylelint:fix": "stylefmt --recursive \"app/**/*.scss\"",
@@ -61,12 +63,6 @@
             "prettier --write"
         ]
     },
-    "prettier": {
-        "trailingComma": "es5",
-        "tabWidth": 4,
-        "semi": false,
-        "singleQuote": true
-    },
     "browserslist": {
         "production": [
             ">0.2%",
@@ -80,7 +76,6 @@
         ]
     },
     "devDependencies": {
-        "@types/styled-components": "^4.4.2",
         "@types/classnames": "^2.2.10",
         "@types/lodash": "^4.14.150",
         "@types/react-redux": "^7.1.7",
@@ -89,18 +84,23 @@
         "@types/redux-actions": "^2.6.1",
         "@types/redux-form": "^8.2.3",
         "@types/redux-saga": "^0.10.5",
+        "@types/styled-components": "^4.4.2",
         "@typescript-eslint/eslint-plugin": "^2.7.0",
         "@typescript-eslint/parser": "^2.7.0",
         "eslint": "^6.1.0",
         "eslint-config-airbnb": "^18.0.1",
+        "eslint-config-prettier": "^6.10.1",
         "eslint-config-react-app": "^5.2.1",
         "eslint-plugin-import": "^2.18.2",
         "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.3",
         "eslint-plugin-react": "^7.14.3",
         "eslint-plugin-react-hooks": "^1.7.0",
         "husky": "^3.0.9",
         "lint-staged": "^10.0.9",
         "prettier": "^1.18.2",
+        "prettier-eslint": "^9.0.1",
+        "prettier-eslint-cli": "^5.0.0",
         "stylelint": "^11.1.1",
         "stylelint-config-recommended-scss": "^4.0.0",
         "stylelint-config-standard": "^19.0.0",
