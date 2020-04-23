@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
-import { persistor } from './store/store';
+import { Provider } from 'react-redux';
+import { persistor, store } from './store/store';
 
 type TemplateType = {
     title: string;
@@ -35,12 +36,16 @@ const CompletedTasks = () => <Template title="Completed Tasks" status="Completed
 class App extends PureComponent {
     render() {
         return (
-            <BrowserRouter>
-                <div>
-                    <Route exact path="/" component={CurrentTasks} />
-                    <Route path="/completed" component={CompletedTasks} />
-                </div>
-            </BrowserRouter>
+            <Provider store={store}>
+                <PersistGate loading={null} persistor={persistor}>
+                    <BrowserRouter>
+                        <div>
+                            <Route exact path="/" component={CurrentTasks} />
+                            <Route path="/completed" component={CompletedTasks} />
+                        </div>
+                    </BrowserRouter>
+                </PersistGate>
+            </Provider>
         );
     }
 }
