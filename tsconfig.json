@@ -11,7 +11,14 @@
         "jsx": "react",
         "skipLibCheck": true,
         "outDir": "build",
-        "baseUrl": "./src",
+        "baseUrl": ".",
+        "paths": {
+            "@ducks/*": ["src/ducks/*"],
+            "@models/*": ["src/models/*"],
+            "@scenes/*": ["src/scenes/*"],
+            "@components/*": ["src/components/*"],
+            "@services/*": ["src/services/*"]
+        },
         "lib": [
             "dom",
             "dom.iterable",
