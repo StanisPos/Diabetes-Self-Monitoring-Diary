@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import { persistor, store } from './store/store';
+import MeasureItem from './components/measure-item';
 
 type TemplateType = {
 	title: string,
@@ -42,6 +43,7 @@ class App extends PureComponent {
 						<div>
 							<Route exact path="/" component={CurrentTasks} />
 							<Route path="/completed" component={CompletedTasks} />
+							<MeasureItem />
 						</div>
 					</BrowserRouter>
 				</PersistGate>
