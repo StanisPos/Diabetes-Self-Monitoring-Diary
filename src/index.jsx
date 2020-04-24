@@ -7,12 +7,13 @@ import 'antd/dist/antd.css';
 import * as serviceWorker from './serviceWorker';
 import { theme } from './services/theme-styles/theme';
 import { Fonts } from './services/theme-styles/fonts';
+import { ResetCss } from './services/theme-styles/reset-css';
 
-console.log(theme);
 ReactDOM.render(
 	<React.StrictMode>
 		<ThemeProvider theme={theme}>
             <Fonts />
+            <ResetCss />
 			<App />
 		</ThemeProvider>
 	</React.StrictMode>,

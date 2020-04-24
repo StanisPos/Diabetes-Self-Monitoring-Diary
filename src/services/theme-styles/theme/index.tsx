@@ -1,15 +1,7 @@
-import { colors, ColorsType } from '../colors';
+import { DefaultTheme } from 'styled-components';
+import { colors } from '../colors';
 
-type Theme = {
-	colors: ColorsType,
-	fonts: {
-		OpenSansLight: string,
-		OpenSansRegular: string,
-		OpenSansBold: string,
-	},
-};
-
-export const theme: Theme = {
+export const theme: DefaultTheme = {
 	colors,
 	fonts: {
 		OpenSansLight: "'OpenSans Light', sans-serif",

@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
-import { Provider } from 'react-redux';
+
 import { persistor, store } from './store/store';
-import DatePicker from './components/date-picker';
+import { DatePicker } from './components/date-picker';
 
 type TemplateType = {
 	title: string,
