@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
+
 import App from './App';
 import 'antd/dist/antd.css';
 import * as serviceWorker from './serviceWorker';
+import { theme } from './services/theme-styles/theme';
+import { Fonts } from './services/theme-styles/fonts';
 
+console.log(theme);
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<ThemeProvider theme={theme}>
+            <Fonts />
+			<App />
+		</ThemeProvider>
 	</React.StrictMode>,
 	document.getElementById('root'),
 );
