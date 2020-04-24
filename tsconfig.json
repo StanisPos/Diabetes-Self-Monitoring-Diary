@@ -11,7 +11,7 @@
         "jsx": "react",
         "skipLibCheck": true,
         "outDir": "build",
-        "baseUrl": "./src",
+        "baseUrl": ".",
         "lib": [
             "dom",
             "dom.iterable",
