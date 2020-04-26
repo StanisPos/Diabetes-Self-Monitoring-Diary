@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import React from 'react';
-import { Todo } from '../types';
+import { GlucoseMeasurementsType } from '../types';
 
 type Props = {
-  todo: Todo,
-  onEdit?: (todo: Todo) => void,
-  onDelete?: (todo: Todo) => void,
+  todo: GlucoseMeasurementsType,
+  onEdit?: (todo: GlucoseMeasurementsType) => void,
+  onDelete?: (todo: GlucoseMeasurementsType) => void,
 };
 
 const Container = styled.li`

@@ -29,7 +29,7 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": [
-      "error",
+      "off",
       {
         "ignoreRestArgs": true
       }
@@ -37,7 +37,7 @@
     "max-len": [
       "warn",
       {
-        "code": 80,
+        "code": 160,
         "ignoreStrings": true,
         "ignoreTemplateLiterals": true,
         "ignoreComments": true
