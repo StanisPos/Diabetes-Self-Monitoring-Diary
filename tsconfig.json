@@ -1,25 +1,40 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "esnext"
-        ],
-        "allowJs": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "jsx": "react"
-    },
-    "include": [
-        "src"
-    ]
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "esnext",
+    "esModuleInterop": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "outDir": "build",
+    "baseUrl": ".",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "es2015",
+      "es2016",
+      "es2017.object",
+      "es2017.string",
+      "es2018.promise"
+    ],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noEmit": true
+  },
+  "include": [
+    "src",
+    "public",
+    "models/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
